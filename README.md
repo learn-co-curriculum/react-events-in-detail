@@ -14,7 +14,13 @@ Let's take a deeper look at the actual event being passed through. A `SyntheticE
 
 ```js
 export default class Clicker extends React.Component {
-  
+  constructor(props) {
+	super(props);
+	
+	// This binding is necessary to make `this` work in the callback
+	this.handleClick = this.handleClick.bind(this);
+	}
+	
   handleClick = (event) => {
     console.log(event.type); // prints 'click'
   }
@@ -42,3 +48,5 @@ You usually don't need to access your event data in an asynchronous manner like 
 
 ## Resources
 - [React Events](https://facebook.github.io/react/docs/events.html)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/react-events-in-detail'>Events In Detail</a> on Learn.co and start learning to code for free.</p>
