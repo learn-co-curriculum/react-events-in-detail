@@ -30,7 +30,7 @@ export default class Clicker extends React.Component {
 For example, if we wanted to get the target of an event, we'd use `event.target`. If we want to prevent a default action whenever an event happens, we call `event.preventDefault()`. This is all super similar to regular browser events and should feel very familiar!
 
 ## Event pooling
-![Chilling in the pool](https://media.giphy.com/media/3ornk83z6oqbWAAUuY/giphy.gif)
+![Chilling in the pool](https://media.giphy.com/media/38Gl1kiklmY5W/giphy.gif)
 
 Since React has its own implementation for events (called `SyntheticEvent`), it allows us to take advantage of several techniques to increase the performance of our applications. One such technique is called 'event pooling'. It might sound complicated, but it's actually pretty simple.
  
