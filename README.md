@@ -62,6 +62,15 @@ described above, but if you do, there are two options: you either store the data
 you need in a variable (e.g. `const target = event.target`), _or_ we can make
 the event persistent by calling that method: `event.persist()`.
 
+> **Note**: As of React version 17, React
+> [no longer uses pooling][remove event pooling] for synthetic events.
+> Therefore, for newer React applications, using `event.persist()` is no longer
+> required. It's still important to learn this concept as many companies still
+> use versions of React prior to React 17, and the topic of event pooling may
+> come up on React job interviews as well.
+
+[remove event pooling]: https://blog.saeloun.com/2021/04/06/react-17-removes-event-pooling-in-modern-system.html#event-pooling
+
 ## Resources
 
-- [React Events](https://facebook.github.io/react/docs/events.html)
+- [React Events](https://reactjs.org/docs/events.html)
