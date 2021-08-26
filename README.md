@@ -19,6 +19,7 @@ event handler to a JSX tag, and then we can use the event's data like this:
 ```jsx
 export default class Clicker extends React.Component {
   handleClick = (event) => {
+    console.log(event); // prints the event object
     console.log(event.type); // prints 'click'
   };
 
